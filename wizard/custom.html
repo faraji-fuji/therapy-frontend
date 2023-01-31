@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <title>HEAL FLEX | Wizard</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-bootstrap-wizard.css" rel="stylesheet" />
+
+    <!-- Fonts and Icons -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="image-container set-full-height" style="background-image: url('assets/img/paper-2.jpeg')">
+        <!--   Big container   -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <!--      Wizard container        -->
+                    <div class="wizard-container">
+                        <div class="card wizard-card" data-color="azure" id="wizard">
+                            <form action="" method="" id="formWizard">
+                                <!--        You can switch " data-color="green" "  with one of the next bright colors: "blue", "azure", "orange", "red"       -->
+                                <div class="wizard-header">
+                                    <h3 class="wizard-title">Tell us about yourself</h3>
+                                    <p class="category">This information will let us match you to the right therapist.
+                                    </p>
+                                </div>
+                                <div class="wizard-navigation">
+                                    <div class="progress-with-circle">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="1" aria-valuemin="1"
+                                            aria-valuemax="4" style="width: 15%;"></div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="#aboutMyself" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-user"></i>
+                                                </div>
+                                                About Myself
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#mySituation" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-direction-alt"></i>
+                                                </div>
+                                                About My Situation
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#myPreferences" data-toggle="tab">
+                                                <div class="icon-circle">
+                                                    <i class="ti-heart"></i>
+                                                </div>
+                                                My Preferences
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="aboutMyself">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h5 class="info-text"> Let's start with the basic details</h5>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>What is your gender identity?</label><br>
+                                                    <select name="gender" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="woman">Woman</option>
+                                                        <option value="man">Man</option>
+                                                        <option value="non binary">Non binary</option>
+                                                        <option value="transfeminine">Transfeminine</option>
+                                                        <option value="transmasculine">Transmasculine</option>
+                                                        <option value="agender">Agender</option>
+                                                        <option value="I don't know">I dont know</option>
+                                                        <option value="I prefer not to say">I prefer not to say</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>How old are you?</label><br>
+                                                    <select name="age" class="form-control">
+                                                        <option disabled="" selected="">- select age group -</option>
+                                                        <option value="18 -21"> 18 - 21 </option>
+                                                        <option value="22 - 26"> 22 - 26 </option>
+                                                        <option value="27 - 35"> 27 - 35 </option>
+                                                        <option value="36 - 60"> 36 - 60 </option>
+                                                        <option value="above 60"> Above 60 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>How do you identify?</label>
+                                                    <select class="form-control" name="identity">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="straight">Straight</option>
+                                                        <option value="gay">Gay</option>
+                                                        <option value="lesbian">Lesbian</option>
+                                                        <option value="bi / pan">Bi/Pan</option>
+                                                        <option value="prefer not to say">Prefer not to say</option>
+                                                        <option value="questioning">Questioning</option>
+                                                        <option value="queer">Queer</option>
+                                                        <option value="asexual">Asexual</option>
+                                                        <option value="i dont know">I don't know</option>
+                                                        <option value="other">other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>How comfortable are you with your identity?</label>
+                                                    <select class="form-control" name="comfortWithIdentity">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="not at all">Not at all</option>
+                                                        <option value="a little comfortable">A little comfortable
+                                                        </option>
+                                                        <option value="somewhat comfortable">Somewhat comfortable
+                                                        </option>
+                                                        <option value="very comfortable">Very comfortable</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>Are you currently experiencing any chronic pain?</label>
+                                                    <select class="form-control" name="chronicPain">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="no">No</option>
+                                                        <option value="yes">Yes</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>Select one that is applicable</label>
+                                                    <select class="form-control" name="situation">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="student">I am a student</option>
+                                                        <option value="veteran">I am a veteran</option>
+                                                        <option value="disabled">I am disabled</option>
+                                                        <option value="unemployed">I am unemployed</option>
+                                                        <option value="low income">I am employed but my income is low
+                                                        </option>
+                                                        <option>other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="mySituation">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h5 class="info-text"> Tell us a bit about your situation</h5>
+                                            </div>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>What is your relationship status?</label><br>
+                                                    <select name="relationshipStatus" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="single">Single</option>
+                                                        <option value="in a relationship">In a relationship</option>
+                                                        <option value="married">Married</option>
+                                                        <option value="divorced">Divorced</option>
+                                                        <option value="widowed">Widowed</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>Do you consider yourself to be religious</label><br>
+                                                    <select name="religious" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>What re your pronouns?</label>
+                                                    <select class="form-control" name="pronouns">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="she her">She/her</option>
+                                                        <option value="he him">He/him</option>
+                                                        <option value="they them">They/them</option>
+                                                        <option value="other">other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>How Would you rate your current financial status?</label>
+                                                    <select class="form-control" name="financialStatus">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="goog">Good</option>
+                                                        <option value="fair">Fair</option>
+                                                        <option value="poor">Poor</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>How would you rate your current sleeping habits?</label>
+                                                    <select class="form-control" name="sleepingHabits">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="good">Good</option>
+                                                        <option value="fair">Fair</option>
+                                                        <option value="poor">Poor</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>When was the last time you thought about suicide?</label>
+                                                    <select class="form-control" name="suicidal">
+                                                        <option disabled="" selected="">- select -
+                                                        </option>
+                                                        <option value="never">Never</option>
+                                                        <option value="a year ago">Over a year ago</option>
+                                                        <option value="three months ago">Over 3 months ago</option>
+                                                        <option value="month ago">Over a month ago</option>
+                                                        <option value="two weeks ago">Over 2 weeks ago</option>
+                                                        <option value="in last two weeks">In the last two weeks</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                    <div class="tab-pane" id="myPreferences">
+                                        <div class="row">
+                                            <h5 class="info-text">Tell us about your preferences</h5>
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>What are your expectations from a therapist? A therapist
+                                                        who...</label><br>
+                                                    <select name="therapistExpectations" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="listens">Listens</option>
+                                                        <option value="explores my past">Explores my past</option>
+                                                        <option value="teaches me new skills">Teaches me new skills
+                                                        </option>
+                                                        <option value="challenges my beliefs">Challenges my beliefs
+                                                        </option>
+                                                        <option value="assigns me homework">Assigns me homework</option>
+                                                        <option value="guides me to set goals">Guides me to set goals
+                                                        </option>
+                                                        <option value="proactively checks in with me">Proactively checks
+                                                            in with me</option>
+                                                        <option value="other">Other</option>
+                                                        <option value="I don't know">I don't know</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>Are there any specific
+                                                        preferences for your therapist?</label><br>
+                                                    <select name="therapistPreference" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="male therapist">Male therapist</option>
+                                                        <option value="female therapist">Female therapist</option>
+                                                        <option value="Christian-based therapy">Christian-based therapy
+                                                        </option>
+                                                        <option value="therapist from LGBTQ+ community">Therapist from
+                                                            LGBTQ+ community
+                                                        </option>
+                                                        <option value="older therapist 45+">Older therapist (45+)
+                                                        </option>
+                                                        <option value="non-religous therapist">Non-religious therapist
+                                                        </option>
+                                                        <option value="therapist of color">Therapist of color</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="form-group">
+                                                    <label>Which of the following resources would be useful for
+                                                        you?</label><br>
+                                                    <select name="usefulResources" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="support groups">Support groups</option>
+                                                        <option value="therapy journal">Therapy Journal</option>
+                                                        <option value="worksheets">Worksheets</option>
+                                                        <option value="goal and habit tracking">Goal/Habit Tracking
+                                                        </option>
+                                                        <option value="educational webinars">Educational Webinars
+                                                        </option>
+                                                        <option value="other">Other</option>
+                                                        <option value="I don't know">I don't know</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-5">
+                                                <div class="form-group">
+                                                    <label>How do you prefer to communicate with your
+                                                        therapist?</label><br>
+                                                    <select name="preferedMethodCommunication" class="form-control">
+                                                        <option disabled="" selected="">- select -</option>
+                                                        <option value="messaging">Mostly via messaging</option>
+                                                        <option value="phone and video sessions">Mostly via phone or
+                                                            video sessions
+                                                        </option>
+                                                        <option value="not sure">Not sure yet(decide later)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="wizard-footer">
+                                    <div class="pull-right">
+                                        <input type='button' class='btn btn-next btn-fill btn-primary btn-wd'
+                                            name='next' value='Next' />
+                                        <input type='submit' class='btn btn-finish btn-fill btn-success btn-wd'
+                                            name='finish' value='Finish' />
+                                    </div>
+
+                                    <div class="pull-left">
+                                        <input type='button' class='btn btn-previous btn-default btn-wd' name='previous'
+                                            value='Previous' />
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+
+<script src="../assets/js/axios.min.js"></script>
+<script src="assets/js/custom.js" type="module"></script>
+
+<!--  Plugin for the Wizard -->
+<script src="assets/js/demo.js" type="text/javascript"></script>
+<script src="assets/js/paper-bootstrap-wizard.js" type="text/javascript"></script>
+
+<!--  More information about jquery.validate here: https://jqueryvalidation.org/	 -->
+<script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+
+</html>
