@@ -59,37 +59,6 @@ function register(name, email, password) {
     });
 }
 
-// login user
-function login(email, password) {
-  axios
-    .post(
-      "http://localhost:8000/login",
-      {
-        email: email,
-        password: password,
-      },
-      {
-        headers: {
-          accept: "application/json",
-        },
-      }
-    )
-    .then((response) => {
-      if (response.status >= 200 && response.status <= 299) {
-        sessionStorage.setItem("loginStatus", "true");
-        window.location.assign("index.html");
-      }
-    })
-    .catch((error) => {
-      // console.log(error.response.data["message"]);
-      // window.alert(error.response.data["message"]);
-
-      document.getElementById("loginAlertDanger").style.display = "block";
-      document.getElementById("loginAlertDangerMessage").innerHTML +=
-        error.response.data["message"];
-    });
-}
-
 // logout user
 function logout() {
   axios
@@ -126,30 +95,81 @@ registerForm.addEventListener("submit", (event) => {
   register(name, email, password);
 });
 
+// login
+// send login request
+function login(data) {
+  axios
+    .post("http://localhost:8000/login", data, {
+      headers: {
+        accept: "application/json",
+      },
+    })
+    .then((response) => {
+      if (response.status >= 200 && response.status <= 299) {
+        sessionStorage.setItem("loginStatus", "true");
+        window.location.assign("index.html");
+      }
+    })
+    .catch((error) => {
+      // console.log(error.response.data["message"]);
+      // window.alert(error.response.data["message"]);
+
+      document.getElementById("loginAlertDanger").style.display = "block";
+      document.getElementById("loginAlertDangerMessage").innerHTML +=
+        error.response.data["message"];
+    });
+}
+
 // login form
 const loginForm = document.getElementById("login-form");
 
 // submit event handler
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
   const formData = new FormData(loginForm);
-  let email, password;
+  let data = {};
 
-  email = formData.get("email");
-  password = formData.get("password");
+  formData.forEach((value, key) => {
+    data[value] = key;
+  });
 
-  login(email, password);
+  login(data);
 });
 
-// wizard
-const wizard = document.getElementById("wizard");
+// contact-us
+// send post request
+function sendContactUsMessage(data) {
+  axios
+    .post("http://localhost:8000/api/contact", data, {
+      headers: {
+        accept: "application/json",
+      },
+    })
+    .then((response) => {
+      if (response.status >= 200 && response.status <= 299) {
+        window.alert("Message Sent Successfully");
+        window.location.reload();
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+// form
+const contactUs = document.getElementById("contactForm");
 
 // submit event handler
-wizard.addEventListener("submit", (event) => {
+contactUs.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const formData = new FormData(wizard);
+  const formData = new FormData(contactUs);
+  let data = {};
 
-  console.log(formData);
+  formData.forEach((value, key) => {
+    data[key] = value;
+  });
+
+  // console.log(data);
+  sendContactUsMessage(data);
 });
